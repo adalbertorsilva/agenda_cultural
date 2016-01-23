@@ -27,8 +27,8 @@ RSpec.describe Event, type: :model do
       expect(build(:event, category: nil)).to_not be_valid
     end
 
-    it "must have a photo attachment" do
-      should validate_attachment_presence(:photo_attachment)
+    it "must have a photo" do
+      expect(create(:event, photo: nil)).to be_valid
     end
 
     it "must set price to zero if it's nil " do
@@ -37,15 +37,14 @@ RSpec.describe Event, type: :model do
       expect(event.price).to eq (0.0)
     end
 
-    it "must have a price greater than or equal to zero" do
-      expect(build(:event, price: -1)).to_not be_valid
-    end
-
     it "must convert the photo attachment to string" do
       event = build(:event, photo: nil)
-      expect(event.save).to be true
-      event.convert_attachment_to_string
+      event.save
       expect(event.photo.nil?).to be false
+    end
+
+    it "must have a price greater than or equal to zero" do
+      expect(build(:event, price: -1)).to_not be_valid
     end
 
     it "must have an hour" do
@@ -57,6 +56,5 @@ RSpec.describe Event, type: :model do
       event.save
       expect(build(:event, :soccer_game)).to_not be_valid
     end
-
   end
 end
