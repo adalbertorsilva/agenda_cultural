@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-01-23T13:30:49-03:00">2016-01-23T13:30:49-03:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-01-25T12:58:21-03:00">2016-01-25T12:58:21-03:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">95.61%</span></span>
+    (<span class="covered_percent"><span class="green">96.46%</span></span>
      covered at
      <span class="covered_strength">
-       <span class="red">
-         0.99
+       <span class="green">
+         1.01
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>21</b> files in total.
-    <b>114</b> relevant lines. 
+    <b>113</b> relevant lines. 
     <span class="green"><b>109</b> lines covered</span> and
-    <span class="red"><b>5</b> lines missed </span>
+    <span class="red"><b>4</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -62,12 +62,12 @@
       
       <tr>
         <td class="strong"><a href="#0a4982e2486ac6ed83073fb564975b5f6690ecb8" class="src_link" title="app/controllers/events_controller.rb">app/controllers/events_controller.rb</a></td>
-        <td class="red strong">80.0 %</td>
-        <td>20</td>
-        <td>10</td>
+        <td class="yellow strong">88.89 %</td>
+        <td>18</td>
+        <td>9</td>
         <td>8</td>
-        <td>2</td>
-        <td>0.9</td>
+        <td>1</td>
+        <td>1.0</td>
       </tr>
       
       <tr>
@@ -92,10 +92,10 @@
       
       <tr>
         <td class="strong"><a href="#23cb9f7d8c24ef809b926c136123e50d418b5404" class="src_link" title="app/models/event.rb">app/models/event.rb</a></td>
-        <td class="yellow strong">83.33 %</td>
-        <td>19</td>
-        <td>12</td>
-        <td>10</td>
+        <td class="yellow strong">84.62 %</td>
+        <td>20</td>
+        <td>13</td>
+        <td>11</td>
         <td>2</td>
         <td>0.8</td>
       </tr>
@@ -223,7 +223,7 @@
       <tr>
         <td class="strong"><a href="#4740cd44607f59f7fde7ced61bd04034784bf0a5" class="src_link" title="config/routes.rb">config/routes.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>61</td>
+        <td>60</td>
         <td>3</td>
         <td>3</td>
         <td>0</td>
@@ -232,10 +232,10 @@
       
       <tr>
         <td class="strong"><a href="#1ce8fb01498f28059beaffa0b51f9dfde46e8fad" class="src_link" title="spec/controllers/events_controller_spec.rb">spec/controllers/events_controller_spec.rb</a></td>
-        <td class="green strong">95.24 %</td>
-        <td>45</td>
-        <td>21</td>
+        <td class="green strong">95.0 %</td>
+        <td>38</td>
         <td>20</td>
+        <td>19</td>
         <td>1</td>
         <td>1.0</td>
       </tr>
@@ -247,7 +247,7 @@
         <td>18</td>
         <td>18</td>
         <td>0</td>
-        <td>1.1</td>
+        <td>1.2</td>
       </tr>
       
       <tr>
@@ -327,11 +327,11 @@
         <div class="source_table" id="0a4982e2486ac6ed83073fb564975b5f6690ecb8">
   <div class="header">
     <h3>app/controllers/events_controller.rb</h3>
-    <h4><span class="red">80.0 %</span> covered</h4>
+    <h4><span class="yellow">88.89 %</span> covered</h4>
     <div>
-      <b>10</b> relevant lines. 
+      <b>9</b> relevant lines. 
       <span class="green"><b>8</b> lines covered</span> and
-      <span class="red"><b>2</b> lines missed.</span>
+      <span class="red"><b>1</b> lines missed.</span>
     </div>
   </div>
   
@@ -386,34 +386,34 @@
           <code class="ruby">    @event = Event.new(event_params)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="9">
+        <li class="missed" data-hits="0" data-linenumber="9">
+          
+          
+          <code class="ruby">    @event.save</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="10">
+        <li class="never" data-hits="" data-linenumber="11">
           
           
-          <code class="ruby">    if @event.save</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="11">
-          
-          
-          <code class="ruby">      redirect_to &quot;success&quot;</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="12">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="13">
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">  private</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="14">
@@ -425,34 +425,22 @@
         <li class="covered" data-hits="1" data-linenumber="15">
           <span class="hits">1</span>
           
-          <code class="ruby">  private</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="16">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="17">
-          <span class="hits">1</span>
-          
           <code class="ruby">  def event_params</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="18">
+        <li class="covered" data-hits="1" data-linenumber="16">
           <span class="hits">1</span>
           
           <code class="ruby">    params.require(:event).permit(:title, :description, :photo, :place, :address, :opening_date, :ending_date, :category, :price, :photo_attachment, :hour)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="19">
+        <li class="never" data-hits="" data-linenumber="17">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="20">
+        <li class="never" data-hits="" data-linenumber="18">
           
           
           <code class="ruby">end</code>
@@ -525,10 +513,10 @@
         <div class="source_table" id="23cb9f7d8c24ef809b926c136123e50d418b5404">
   <div class="header">
     <h3>app/models/event.rb</h3>
-    <h4><span class="yellow">83.33 %</span> covered</h4>
+    <h4><span class="yellow">84.62 %</span> covered</h4>
     <div>
-      <b>12</b> relevant lines. 
-      <span class="green"><b>10</b> lines covered</span> and
+      <b>13</b> relevant lines. 
+      <span class="green"><b>11</b> lines covered</span> and
       <span class="red"><b>2</b> lines missed.</span>
     </div>
   </div>
@@ -545,7 +533,7 @@
         <li class="covered" data-hits="1" data-linenumber="2">
           <span class="hits">1</span>
           
-          <code class="ruby">  validates :title, :description, :place, :address, :opening_date, :category, :hour, :photo, presence: true</code>
+          <code class="ruby">  validates :title, :description, :place, :address, :opening_date, :category, :hour, presence: true</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="3">
@@ -581,70 +569,76 @@
         <li class="covered" data-hits="1" data-linenumber="8">
           <span class="hits">1</span>
           
-          <code class="ruby">  before_validation :set_price, :convert_attachment_to_string</code>
+          <code class="ruby">  before_validation :set_price</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="9">
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  before_save :convert_attachment_to_string</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="10">
+        <li class="covered" data-hits="1" data-linenumber="11">
           <span class="hits">1</span>
           
           <code class="ruby">  private</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="11">
+        <li class="never" data-hits="" data-linenumber="12">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="12">
+        <li class="covered" data-hits="1" data-linenumber="13">
           <span class="hits">1</span>
           
           <code class="ruby">  def set_price</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="13">
+        <li class="missed" data-hits="0" data-linenumber="14">
           
           
           <code class="ruby">    self.price ||= 0</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="14">
+        <li class="never" data-hits="" data-linenumber="15">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="15">
+        <li class="never" data-hits="" data-linenumber="16">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="16">
+        <li class="covered" data-hits="1" data-linenumber="17">
           <span class="hits">1</span>
           
           <code class="ruby">  def convert_attachment_to_string</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="17">
+        <li class="missed" data-hits="0" data-linenumber="18">
           
           
           <code class="ruby">    self.photo = Base64.encode64(Paperclip.io_adapters.for(self.photo_attachment).read) unless self.photo_attachment.nil?</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="18">
+        <li class="never" data-hits="" data-linenumber="19">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="19">
+        <li class="never" data-hits="" data-linenumber="20">
           
           
           <code class="ruby">end</code>
@@ -1724,355 +1718,349 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="3">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="4">
+        <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
           <code class="ruby">  get &quot;events/new&quot; =&gt; &quot;events#new&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="5">
+        <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
-          <code class="ruby">  post &quot;events/create&quot; =&gt; &quot;events#create&quot;</code>
+          <code class="ruby">  post &quot;/events&quot; =&gt; &quot;events#create&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="6">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  # The priority is based upon order of creation: first created -&gt; highest priority.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="7">
           
           
-          <code class="ruby">  # The priority is based upon order of creation: first created -&gt; highest priority.</code>
+          <code class="ruby">  # See how all your routes lay out with &quot;rake routes&quot;.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="8">
           
           
-          <code class="ruby">  # See how all your routes lay out with &quot;rake routes&quot;.</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="9">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  # You can have the root of your site routed with &quot;root&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="10">
           
           
-          <code class="ruby">  # You can have the root of your site routed with &quot;root&quot;</code>
+          <code class="ruby">  # root &#39;welcome#index&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="11">
           
           
-          <code class="ruby">  # root &#39;welcome#index&#39;</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="12">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  # Example of regular route:</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="13">
           
           
-          <code class="ruby">  # Example of regular route:</code>
+          <code class="ruby">  #   get &#39;products/:id&#39; =&gt; &#39;catalog#view&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="14">
           
           
-          <code class="ruby">  #   get &#39;products/:id&#39; =&gt; &#39;catalog#view&#39;</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="15">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  # Example of named route that can be invoked with purchase_url(id: product.id)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="16">
           
           
-          <code class="ruby">  # Example of named route that can be invoked with purchase_url(id: product.id)</code>
+          <code class="ruby">  #   get &#39;products/:id/purchase&#39; =&gt; &#39;catalog#purchase&#39;, as: :purchase</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="17">
           
           
-          <code class="ruby">  #   get &#39;products/:id/purchase&#39; =&gt; &#39;catalog#purchase&#39;, as: :purchase</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="18">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  # Example resource route (maps HTTP verbs to controller actions automatically):</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="19">
           
           
-          <code class="ruby">  # Example resource route (maps HTTP verbs to controller actions automatically):</code>
+          <code class="ruby">  #   resources :products</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="20">
           
           
-          <code class="ruby">  #   resources :products</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="21">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  # Example resource route with options:</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="22">
           
           
-          <code class="ruby">  # Example resource route with options:</code>
+          <code class="ruby">  #   resources :products do</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="23">
           
           
-          <code class="ruby">  #   resources :products do</code>
+          <code class="ruby">  #     member do</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="24">
           
           
-          <code class="ruby">  #     member do</code>
+          <code class="ruby">  #       get &#39;short&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="25">
           
           
-          <code class="ruby">  #       get &#39;short&#39;</code>
+          <code class="ruby">  #       post &#39;toggle&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="26">
           
           
-          <code class="ruby">  #       post &#39;toggle&#39;</code>
+          <code class="ruby">  #     end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="27">
           
           
-          <code class="ruby">  #     end</code>
+          <code class="ruby">  #</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="28">
           
           
-          <code class="ruby">  #</code>
+          <code class="ruby">  #     collection do</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="29">
           
           
-          <code class="ruby">  #     collection do</code>
+          <code class="ruby">  #       get &#39;sold&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="30">
           
           
-          <code class="ruby">  #       get &#39;sold&#39;</code>
+          <code class="ruby">  #     end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="31">
           
           
-          <code class="ruby">  #     end</code>
+          <code class="ruby">  #   end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="32">
           
           
-          <code class="ruby">  #   end</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="33">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  # Example resource route with sub-resources:</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="34">
           
           
-          <code class="ruby">  # Example resource route with sub-resources:</code>
+          <code class="ruby">  #   resources :products do</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="35">
           
           
-          <code class="ruby">  #   resources :products do</code>
+          <code class="ruby">  #     resources :comments, :sales</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="36">
           
           
-          <code class="ruby">  #     resources :comments, :sales</code>
+          <code class="ruby">  #     resource :seller</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="37">
           
           
-          <code class="ruby">  #     resource :seller</code>
+          <code class="ruby">  #   end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="38">
           
           
-          <code class="ruby">  #   end</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="39">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  # Example resource route with more complex sub-resources:</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="40">
           
           
-          <code class="ruby">  # Example resource route with more complex sub-resources:</code>
+          <code class="ruby">  #   resources :products do</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="41">
           
           
-          <code class="ruby">  #   resources :products do</code>
+          <code class="ruby">  #     resources :comments</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="42">
           
           
-          <code class="ruby">  #     resources :comments</code>
+          <code class="ruby">  #     resources :sales do</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="43">
           
           
-          <code class="ruby">  #     resources :sales do</code>
+          <code class="ruby">  #       get &#39;recent&#39;, on: :collection</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="44">
           
           
-          <code class="ruby">  #       get &#39;recent&#39;, on: :collection</code>
+          <code class="ruby">  #     end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="45">
           
           
-          <code class="ruby">  #     end</code>
+          <code class="ruby">  #   end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="46">
           
           
-          <code class="ruby">  #   end</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="47">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  # Example resource route with concerns:</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="48">
           
           
-          <code class="ruby">  # Example resource route with concerns:</code>
+          <code class="ruby">  #   concern :toggleable do</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="49">
           
           
-          <code class="ruby">  #   concern :toggleable do</code>
+          <code class="ruby">  #     post &#39;toggle&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="50">
           
           
-          <code class="ruby">  #     post &#39;toggle&#39;</code>
+          <code class="ruby">  #   end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="51">
           
           
-          <code class="ruby">  #   end</code>
+          <code class="ruby">  #   resources :posts, concerns: :toggleable</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="52">
           
           
-          <code class="ruby">  #   resources :posts, concerns: :toggleable</code>
+          <code class="ruby">  #   resources :photos, concerns: :toggleable</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="53">
           
           
-          <code class="ruby">  #   resources :photos, concerns: :toggleable</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="54">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  # Example resource route within a namespace:</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="55">
           
           
-          <code class="ruby">  # Example resource route within a namespace:</code>
+          <code class="ruby">  #   namespace :admin do</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="56">
           
           
-          <code class="ruby">  #   namespace :admin do</code>
+          <code class="ruby">  #     # Directs /admin/products/* to Admin::ProductsController</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="57">
           
           
-          <code class="ruby">  #     # Directs /admin/products/* to Admin::ProductsController</code>
+          <code class="ruby">  #     # (app/controllers/admin/products_controller.rb)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="58">
           
           
-          <code class="ruby">  #     # (app/controllers/admin/products_controller.rb)</code>
+          <code class="ruby">  #     resources :products</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="59">
           
           
-          <code class="ruby">  #     resources :products</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="60">
-          
-          
           <code class="ruby">  #   end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="61">
+        <li class="never" data-hits="" data-linenumber="60">
           
           
           <code class="ruby">end</code>
@@ -2085,10 +2073,10 @@
         <div class="source_table" id="1ce8fb01498f28059beaffa0b51f9dfde46e8fad">
   <div class="header">
     <h3>spec/controllers/events_controller_spec.rb</h3>
-    <h4><span class="green">95.24 %</span> covered</h4>
+    <h4><span class="green">95.0 %</span> covered</h4>
     <div>
-      <b>21</b> relevant lines. 
-      <span class="green"><b>20</b> lines covered</span> and
+      <b>20</b> relevant lines. 
+      <span class="green"><b>19</b> lines covered</span> and
       <span class="red"><b>1</b> lines missed.</span>
     </div>
   </div>
@@ -2219,148 +2207,106 @@
         <li class="covered" data-hits="1" data-linenumber="21">
           <span class="hits">1</span>
           
-          <code class="ruby">      before(:each) do</code>
+          <code class="ruby">      it &quot;must persist the event&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="22">
           <span class="hits">1</span>
           
-          <code class="ruby">        @image = Rack::Test::UploadedFile.new(Rails.root.join(&#39;spec/images/rails.png&#39;), &#39;image/png&#39;)</code>
+          <code class="ruby">        event = build(:event)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="23">
           
           
-          <code class="ruby">      end</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="24">
+        <li class="covered" data-hits="1" data-linenumber="24">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">        attachment = File.new(Rails.root.join(&#39;spec/fixtures/images/rails.png&#39;))</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="25">
           <span class="hits">1</span>
           
-          <code class="ruby">      it &quot;must persist the event&quot; do</code>
+          <code class="ruby">        event.photo_attachment = ActionDispatch::Http::UploadedFile.new(tempfile: attachment, filename: File.basename(attachment), type: &quot;image/png&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="26">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="26">
           
-          <code class="ruby">        event = build(:event, photo: nil, photo_attachment: nil)</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="27">
           <span class="hits">1</span>
           
-          <code class="ruby">        event.photo_attachment = @image</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="28">
-          <span class="hits">1</span>
-          
           <code class="ruby">        post :create, event: instanciate_event_params(event)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="29">
+        <li class="missed" data-hits="0" data-linenumber="28">
           
           
           <code class="ruby">        expect(assigns(:event).id.nil?).to be false</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="30">
+        <li class="never" data-hits="" data-linenumber="29">
           
           
           <code class="ruby">      end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="31">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="32">
-          
-          
-          <code class="ruby">      #it &quot;must render a success page&quot; do</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="33">
-          
-          
-          <code class="ruby">      #  post :create</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="34">
-          
-          
-          <code class="ruby">      #  expect(response).to redirect_to(&quot;success&quot;)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="35">
-          
-          
-          <code class="ruby">      #end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="36">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="37">
+        <li class="never" data-hits="" data-linenumber="30">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="38">
+        <li class="never" data-hits="" data-linenumber="31">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="39">
+        <li class="never" data-hits="" data-linenumber="32">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="40">
+        <li class="covered" data-hits="1" data-linenumber="33">
           <span class="hits">1</span>
           
           <code class="ruby">  private</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="41">
+        <li class="never" data-hits="" data-linenumber="34">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="42">
+        <li class="covered" data-hits="1" data-linenumber="35">
           <span class="hits">1</span>
           
           <code class="ruby">  def instanciate_event_params(event)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="43">
+        <li class="covered" data-hits="1" data-linenumber="36">
           <span class="hits">1</span>
           
           <code class="ruby">    {title: event.title, description: event.description, place: event.place, address: event.address, opening_date: event.opening_date, category: event.category, price: event.price, photo_attachment: event.photo_attachment, hour: event. hour}</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="44">
+        <li class="never" data-hits="" data-linenumber="37">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="45">
+        <li class="never" data-hits="" data-linenumber="38">
           
           
           <code class="ruby">end</code>
@@ -2408,8 +2354,8 @@
           <code class="ruby">    description &#39;A simples description&#39;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="5">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="5">
+          <span class="hits">2</span>
           
           <code class="ruby">    photo { Faker::Bitcoin.address }</code>
         </li>
@@ -2450,10 +2396,10 @@
           <code class="ruby">    price 1.99</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="12">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="12">
+          <span class="hits">2</span>
           
-          <code class="ruby">    photo_attachment {File.new(&quot;#{Rails.root}/spec/images/rails.png&quot;)}</code>
+          <code class="ruby">    photo_attachment {Rack::Test::UploadedFile.new(Rails.root.join(&#39;spec/fixtures/images/rails.png&#39;), &#39;image/png&#39;)}</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="13">

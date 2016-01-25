@@ -15,25 +15,27 @@ RSpec.describe EventsController, type: :controller do
     end
   end
 
+  # context "User accesses the index page" do
+  #
+  #   it "must get all events for the current date and after" do
+  #
+  #   end
+  #
+  # end
+
+
   context "user creates a new event" do
     describe "with valid fields" do
 
-      before(:each) do
-        @image = Rack::Test::UploadedFile.new(Rails.root.join('spec/images/rails.png'), 'image/png')
-      end
-
       it "must persist the event" do
-        event = build(:event, photo: nil, photo_attachment: nil)
-        event.photo_attachment = @image
+        event = build(:event)
+
+        attachment = File.new(Rails.root.join('spec/fixtures/images/rails.png'))
+        event.photo_attachment = ActionDispatch::Http::UploadedFile.new(tempfile: attachment, filename: File.basename(attachment), type: "image/png")
+
         post :create, event: instanciate_event_params(event)
         expect(assigns(:event).id.nil?).to be false
       end
-
-      #it "must render a success page" do
-      #  post :create
-      #  expect(response).to redirect_to("success")
-      #end
-
     end
   end
 

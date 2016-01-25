@@ -6,10 +6,8 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.new(event_params)
+    @event.save
 
-    if @event.save
-      redirect_to "success"
-    end
   end
 
   private

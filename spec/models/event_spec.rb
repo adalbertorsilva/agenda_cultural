@@ -27,8 +27,8 @@ RSpec.describe Event, type: :model do
       expect(build(:event, category: nil)).to_not be_valid
     end
 
-    it "must have a photo" do
-      expect(create(:event, photo: nil)).to be_valid
+    it do
+       should validate_presence_of :photo_attachment
     end
 
     it "must set price to zero if it's nil " do

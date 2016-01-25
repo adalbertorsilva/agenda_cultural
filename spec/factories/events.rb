@@ -9,7 +9,7 @@ FactoryGirl.define do
     ending_date Faker::Date.forward(2)
     category 'any category'
     price 1.99
-    photo_attachment {File.new("#{Rails.root}/spec/images/rails.png")}
+    photo_attachment {Rack::Test::UploadedFile.new(Rails.root.join('spec/fixtures/images/rails.png'), 'image/png')}
     hour '00:00'
   end
 
