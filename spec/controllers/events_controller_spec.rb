@@ -26,27 +26,27 @@ RSpec.describe EventsController, type: :controller do
       expect(assigns(:events).where(opening_date: Date.current).any? ).to be true
       expect(assigns(:events).where(opening_date: Date.current.tomorrow).any? ).to be true
     end
+
+
+
+  context "user creates a new event" do
+    describe "with valid fields" do
+
+      it "must persist the event" do
+        event = build(:event)
+
+        attachment = File.new(Rails.root.join('spec/fixtures/images/rails.png'))
+        event.photo_attachment = ActionDispatch::Http::UploadedFile.new(tempfile: attachment, filename: File.basename(attachment), type: "image/png")
+
+        post :create, event: instanciate_event_params(event)
+        expect(assigns(:event).id.nil?).to be false
+      end
+    end
   end
 
+  private
 
-  # context "user creates a new event" do
-  #   describe "with valid fields" do
-  #
-  #     it "must persist the event" do
-  #       event = build(:event)
-  #
-  #       attachment = File.new(Rails.root.join('spec/fixtures/images/rails.png'))
-  #       event.photo_attachment = ActionDispatch::Http::UploadedFile.new(tempfile: attachment, filename: File.basename(attachment), type: "image/png")
-  #
-  #       post :create, event: instanciate_event_params(event)
-  #       expect(assigns(:event).id.nil?).to be false
-  #     end
-  #   end
-  # end
-  #
-  # private
-  #
-  # def instanciate_event_params(event)
-  #   {title: event.title, description: event.description, place: event.place, address: event.address, opening_date: event.opening_date, category: event.category, price: event.price, photo_attachment: event.photo_attachment, hour: event. hour}
-  # end
+  def instanciate_event_params(event)
+    {title: event.title, description: event.description, place: event.place, address: event.address, opening_date: event.opening_date, category: event.category, price: event.price, photo_attachment: event.photo_attachment, hour: event. hour}
+  end
 end
