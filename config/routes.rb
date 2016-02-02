@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+
+  root "events#index"
   get "/events" => "events#index"
   get "events/new" => "events#new"
   post "/events" => "events#create"

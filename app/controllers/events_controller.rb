@@ -2,6 +2,12 @@ class EventsController < ApplicationController
 
   def index
     @events = Event.where("opening_date >= current_date")
+
+    respond_to do |format|
+      format.html
+      format.json
+    end
+
   end
 
   def new
@@ -10,7 +16,7 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.new(event_params)
-    
+
     if @event.save
       redirect_to events_path
     else
