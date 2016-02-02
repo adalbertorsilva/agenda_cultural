@@ -1,1 +1,12 @@
 <h1>INDEX PAGE</h1>
+
+
+<% @events.each do |event| %>
+
+  <%= event.title%> <br>
+
+<%end%>
+
+
+
+<%= button_to "New", { action: "new" }, method: :get  %>

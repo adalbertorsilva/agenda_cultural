@@ -3,33 +3,23 @@ require 'rails_helper'
 RSpec.describe Event, type: :model do
   context 'admin creates an event' do
 
-    it 'must have a title' do
-      expect(build(:event, title: nil)).to_not be_valid
-    end
+    it {should validate_presence_of :title}
 
-    it 'must have a description' do
-      expect(build(:event, description: nil)).to_not be_valid
-    end
+    it {should validate_presence_of :description}
 
-    it 'must have a place' do
-      expect(build(:event, place: nil)).to_not be_valid
-    end
+    it {should validate_presence_of :place}
 
-    it 'must have a address' do
-      expect(build(:event, address: nil)).to_not be_valid
-    end
+    it {should validate_presence_of :address}
 
-    it 'must have a opening date' do
-      expect(build(:event, opening_date: nil)).to_not be_valid
-    end
+    it {should validate_presence_of :opening_date}
 
-    it 'must have a category' do
-      expect(build(:event, category: nil)).to_not be_valid
-    end
+    it {should validate_presence_of :category}
 
-    it do
-       should validate_presence_of :photo_attachment
-    end
+    it { should validate_presence_of :photo_attachment}
+
+    it { should validate_presence_of :hour}
+
+    it {should validate_numericality_of :price}
 
     it "must set price to zero if it's nil " do
       event = build(:event, price: nil)
@@ -45,10 +35,6 @@ RSpec.describe Event, type: :model do
 
     it "must have a price greater than or equal to zero" do
       expect(build(:event, price: -1)).to_not be_valid
-    end
-
-    it "must have an hour" do
-      expect(build(:event, hour: nil)).to_not be_valid
     end
 
     it "must have a unique combination of title, initial date, hour and place" do

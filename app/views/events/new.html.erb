@@ -13,7 +13,25 @@
   </div>
 <% end %>
 
-  <%= e.file_field :photo_attachment %>
+  <%= e.file_field :photo_attachment, placeholder: "Photo" %><br>
+
+  <%= e.text_field :title, placeholder: "Title" %><br>
+
+  <%= e.text_field :description, placeholder: "Description" %><br>
+
+  <%= e.text_field :place, placeholder: "Place" %><br>
+
+  <%= e.text_field :address, placeholder:"Address" %><br>
+
+  <%= e.date_field :opening_date, placeholder: "Beginning Date" %>
+
+  <%= e.date_field :ending_date, placeholder: "Ending Date" %><br>
+
+  <%= e.text_field :category, placeholder: "Category" %><br>
+
+  <%= e.time_select :hour, :value => @event.hour, :default => Time.now%><br>
+
+  <%= e.number_field :price, placeholder: "Price" %><br>
 
   <%= e.submit %>
 
