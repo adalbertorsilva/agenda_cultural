@@ -3,23 +3,41 @@ require 'rails_helper'
 RSpec.describe Event, type: :model do
   context 'admin creates an event' do
 
-    it {should validate_presence_of :title}
+    it "must have a non nil title" do
+      expect(build(:event, title: nil)).to_not be_valid
+    end
 
-    it {should validate_presence_of :description}
+    it "must have a non nil description" do
+      expect(build(:event, description: nil)).to_not be_valid
+    end
 
-    it {should validate_presence_of :place}
+    it "must have a non nil place" do
+      expect(build(:event, place: nil)).to_not be_valid
+    end
 
-    it {should validate_presence_of :address}
+    it "must have a non nil address" do
+      expect(build(:event, address: nil)).to_not be_valid
+    end
 
-    it {should validate_presence_of :opening_date}
+    it "must have a non nil opening date" do
+      expect(build(:event, opening_date: nil)).to_not be_valid
+    end
 
-    it {should validate_presence_of :category}
+    it "must have a non nil category" do
+      expect(build(:event, category: nil)).to_not be_valid
+    end
 
-    it { should validate_presence_of :photo_attachment}
+    it "must have a non nil photo_attachment" do
+      expect(build(:event, photo_attachment: nil)).to_not be_valid
+    end
 
-    it { should validate_presence_of :hour}
+    it "must have a non nil hour" do
+      expect(build(:event, hour: nil)).to_not be_valid
+    end
 
-    it {should validate_numericality_of :price}
+    it "must have a number as price" do
+      expect(build(:event, price: 'number')).to_not be_valid
+    end
 
     it "must set price to zero if it's nil " do
       event = build(:event, price: nil)
@@ -42,5 +60,14 @@ RSpec.describe Event, type: :model do
       event.save
       expect(build(:event, :soccer_game)).to_not be_valid
     end
+
+    it "must have an ending date after opening date" do
+      expect(build(:event, ending_date: Date.new << -1)).to_not be_valid
+    end
+
+    it "can have an empty ending date" do
+      expect(build(:event, ending_date:nil)).to be_valid
+    end
+
   end
 end

@@ -1,4 +1,9 @@
 class Event < ActiveRecord::Base
+
+  include ActiveModel::Validations
+
+  validates_with DateIntervalValidator
+
   validates :title, :description, :place, :address, :opening_date, :category, :hour, presence: true
   validates :price, numericality:{greater_than_or_equal_to: 0}
   validates :title, uniqueness:{scope:[:opening_date, :hour, :place]}
