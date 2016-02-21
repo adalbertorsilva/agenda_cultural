@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-02-20T11:22:10-03:00">2016-02-20T11:22:10-03:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-02-21T14:15:22-03:00">2016-02-21T14:15:22-03:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.79
+         1.92
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>20</b> files in total.
-    <b>131</b> relevant lines. 
-    <span class="green"><b>131</b> lines covered</span> and
+    <b>21</b> files in total.
+    <b>138</b> relevant lines. 
+    <span class="green"><b>138</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -73,9 +73,9 @@
       <tr>
         <td class="strong"><a href="#23cb9f7d8c24ef809b926c136123e50d418b5404" class="src_link" title="app/models/event.rb">app/models/event.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>25</td>
-        <td>15</td>
-        <td>15</td>
+        <td>26</td>
+        <td>16</td>
+        <td>16</td>
         <td>0</td>
         <td>2.1</td>
       </tr>
@@ -87,7 +87,17 @@
         <td>6</td>
         <td>6</td>
         <td>0</td>
-        <td>6.0</td>
+        <td>6.3</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#12726164efc6d3a43ad6dcb6c8da76870c1813af" class="src_link" title="app/validators/opening_date_validator.rb">app/validators/opening_date_validator.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>11</td>
+        <td>4</td>
+        <td>4</td>
+        <td>0</td>
+        <td>5.0</td>
       </tr>
       
       <tr>
@@ -227,15 +237,15 @@
         <td>18</td>
         <td>18</td>
         <td>0</td>
-        <td>4.2</td>
+        <td>4.4</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#3adf246478e8702078f43cb1276289f48d706655" class="src_link" title="spec/models/event_spec.rb">spec/models/event_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>73</td>
-        <td>39</td>
-        <td>39</td>
+        <td>77</td>
+        <td>41</td>
+        <td>41</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -331,8 +341,8 @@
     <h3>app/models/event.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>15</b> relevant lines. 
-      <span class="green"><b>15</b> lines covered</span> and
+      <b>16</b> relevant lines. 
+      <span class="green"><b>16</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -370,121 +380,127 @@
           <code class="ruby">  validates_with DateIntervalValidator</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="6">
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  validates_with OpeningDateValidator</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
           
           
           <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="7">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  validates :title, :description, :place, :address, :opening_date, :category, :hour, presence: true</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="8">
           <span class="hits">1</span>
           
-          <code class="ruby">  validates :price, numericality:{greater_than_or_equal_to: 0}</code>
+          <code class="ruby">  validates :title, :description, :place, :address, :opening_date, :category, :hour, presence: true</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="9">
           <span class="hits">1</span>
           
-          <code class="ruby">  validates :title, uniqueness:{scope:[:opening_date, :hour, :place]}</code>
+          <code class="ruby">  validates :price, numericality:{greater_than_or_equal_to: 0}</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="10">
           <span class="hits">1</span>
           
-          <code class="ruby">  has_attached_file :photo_attachment, styles: { original: &quot;300x300&gt;&quot; }, url: &quot;/events/:filename&quot;</code>
+          <code class="ruby">  validates :title, uniqueness:{scope:[:opening_date, :hour, :place]}</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="11">
           <span class="hits">1</span>
           
+          <code class="ruby">  has_attached_file :photo_attachment, styles: { original: &quot;300x300&gt;&quot; }, url: &quot;/events/:filename&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="12">
+          <span class="hits">1</span>
+          
           <code class="ruby">  validates_attachment :photo_attachment, presence: true, content_type: { content_type: [&quot;image/jpg&quot;, &quot;image/jpeg&quot;, &quot;image/png&quot;] }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="12">
+        <li class="never" data-hits="" data-linenumber="13">
           
           
           <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="13">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  before_validation :set_price</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="14">
           <span class="hits">1</span>
           
+          <code class="ruby">  before_validation :set_price</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
+          
           <code class="ruby">  before_save :convert_attachment_to_string</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="15">
+        <li class="never" data-hits="" data-linenumber="16">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="16">
+        <li class="covered" data-hits="1" data-linenumber="17">
           <span class="hits">1</span>
           
           <code class="ruby">  private</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="17">
+        <li class="never" data-hits="" data-linenumber="18">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="18">
+        <li class="covered" data-hits="1" data-linenumber="19">
           <span class="hits">1</span>
           
           <code class="ruby">  def set_price</code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="19">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="17" data-linenumber="20">
+          <span class="hits">17</span>
           
           <code class="ruby">    self.price ||= 0</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="20">
-          
-          
-          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="21">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="22">
+        <li class="covered" data-hits="1" data-linenumber="23">
           <span class="hits">1</span>
           
           <code class="ruby">  def convert_attachment_to_string</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="23">
+        <li class="covered" data-hits="2" data-linenumber="24">
           <span class="hits">2</span>
           
           <code class="ruby">    self.photo = Base64.encode64(Paperclip.io_adapters.for(self.photo_attachment).read) unless self.photo_attachment.nil?</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="24">
+        <li class="never" data-hits="" data-linenumber="25">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="25">
+        <li class="never" data-hits="" data-linenumber="26">
           
           
           <code class="ruby">end</code>
@@ -526,8 +542,8 @@
           <code class="ruby">  def validate(record)</code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="4">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="17" data-linenumber="4">
+          <span class="hits">17</span>
           
           <code class="ruby">    if filled_dates?(record) &amp;&amp; record.opening_date &gt; record.ending_date</code>
         </li>
@@ -562,8 +578,8 @@
           <code class="ruby">  def filled_dates?(record)</code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="10">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="17" data-linenumber="10">
+          <span class="hits">17</span>
           
           <code class="ruby">    record.opening_date != nil &amp;&amp; record.ending_date != nil</code>
         </li>
@@ -581,6 +597,90 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="12726164efc6d3a43ad6dcb6c8da76870c1813af">
+  <div class="header">
+    <h3>app/validators/opening_date_validator.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>4</b> relevant lines. 
+      <span class="green"><b>4</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class OpeningDateValidator &lt; ActiveModel::Validator</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def validate(record)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="17" data-linenumber="5">
+          <span class="hits">17</span>
+          
+          <code class="ruby">    if record.opening_date != nil &amp;&amp; record.opening_date &lt; Date.today</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      record.errors[:opening_date] &lt;&lt; &quot;Can&#39;t be before the current date&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
           
           
           <code class="ruby">end</code>
@@ -2056,8 +2156,8 @@
           <code class="ruby">  factory :event do</code>
         </li>
       
-        <li class="covered" data-hits="14" data-linenumber="3">
-          <span class="hits">14</span>
+        <li class="covered" data-hits="15" data-linenumber="3">
+          <span class="hits">15</span>
           
           <code class="ruby">    title { Faker::Name.name }</code>
         </li>
@@ -2068,8 +2168,8 @@
           <code class="ruby">    description &#39;A simples description&#39;</code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="5">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="17" data-linenumber="5">
+          <span class="hits">17</span>
           
           <code class="ruby">    photo { Faker::Bitcoin.address }</code>
         </li>
@@ -2080,8 +2180,8 @@
           <code class="ruby">    place &#39;Anywhere&#39;</code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="7">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="17" data-linenumber="7">
+          <span class="hits">17</span>
           
           <code class="ruby">    address { Faker::Address.street_address }</code>
         </li>
@@ -2110,8 +2210,8 @@
           <code class="ruby">    price 1.99</code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="12">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="17" data-linenumber="12">
+          <span class="hits">17</span>
           
           <code class="ruby">    photo_attachment {Rack::Test::UploadedFile.new(Rails.root.join(&#39;spec/fixtures/images/rails.png&#39;), &#39;image/png&#39;)}</code>
         </li>
@@ -2191,8 +2291,8 @@
     <h3>spec/models/event_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>39</b> relevant lines. 
-      <span class="green"><b>39</b> lines covered</span> and
+      <b>41</b> relevant lines. 
+      <span class="green"><b>41</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -2587,7 +2687,7 @@
         <li class="covered" data-hits="1" data-linenumber="65">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(build(:event, ending_date: Date.new &lt;&lt; -1)).to_not be_valid</code>
+          <code class="ruby">      expect(build(:event, ending_date: Date.yesterday)).to_not be_valid</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="66">
@@ -2626,13 +2726,37 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="72">
+        <li class="covered" data-hits="1" data-linenumber="72">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;must have an opening date bigger or equal current date&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="73">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(build(:event, opening_date: Date.yesterday, ending_date: nil)).to_not be_valid</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="74">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="75">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="76">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="73">
+        <li class="never" data-hits="" data-linenumber="77">
           
           
           <code class="ruby">end</code>

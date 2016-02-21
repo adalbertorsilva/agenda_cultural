@@ -62,11 +62,15 @@ RSpec.describe Event, type: :model do
     end
 
     it "must have an ending date after opening date" do
-      expect(build(:event, ending_date: Date.new << -1)).to_not be_valid
+      expect(build(:event, ending_date: Date.yesterday)).to_not be_valid
     end
 
     it "can have an empty ending date" do
       expect(build(:event, ending_date:nil)).to be_valid
+    end
+
+    it "must have an opening date bigger or equal current date" do
+      expect(build(:event, opening_date: Date.yesterday, ending_date: nil)).to_not be_valid
     end
 
   end
